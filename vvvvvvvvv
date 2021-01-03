@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feraille | ferraliste Website Design</title>
+    <link rel="shortcut icon" href="images/icon.png" />
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+     <div class="small_container" id="container1">
+        <div class="row">
+            <div class="col4">
+              <a href=""><img src="images/c6.jpg">
+                  <h4 style='text-align:center;'>Tole voiture</h4>
+            </div>
+            <div class="col4">
+              <a href=""><img src="images/c6.jpg">
+                  <h4 style='text-align:center;'>Tole voiture</h4>
+            </div>            
+            <div class="col4">
+              <a href=""><img src="images/c6.jpg">
+                  <h4 style='text-align:center;'>Tole voiture</h4>
+            </div> 
+                       
+           
+        </div>
+        <div class="row">
+          <div class="col4">
+            <a href=""><img src="images/c6.jpg">
+                <h4 style='text-align:center;'>Tole voiture</h4>
+          </div>
+        </div> 
+      </div>
+
+  </div>
+<body class="body1">
+    <!-- header section start -->
+    <div class="header">
+        <div class="container">
+
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo1.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li class="active"><a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;"></i>    Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#Contact">Contact</a></li>
+                        <li><a href="account.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>    Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+            </div>
+            <div class="row" id="Contact">
+                    <div class="header-widget header-widget--work-hours">
+                      <span class="header-widget__icon fa fa-clock-o fa-3x"></span>
+                      <div class="header-widget__body">
+                        Working Hours:<br>
+                        Mon - Fri: 7:30 am - 6:30 pm<br>
+                        Sat - Sun: 10:30 am - 5:30 pm
+                      </div>
+                    </div>
+        
+                    <div class="header-widget header-widget--location">
+                      <span class="header-widget__icon fa fa-map-marker fa-3x"></span>
+                      <div class="header-widget__body">
+                        Location:<br>
+                        Rue Hedi Nuira, 1023 Tunis
+                      </div>
+                    </div>
+        
+                    <div class="header-widget header-widget--contacts">
+                      <span class="header-widget__icon fa fa-comments-o fa-3x"></span>
+                      <div class="header-widget__body">
+                        Skype: mouhebHamza<br>
+                        Whatsapp: +216 55 55 55 55<br>
+                        Twitter: @mouheb_hamza
+                      </div>
+                    </div>
+
+                </div>
+        </div>
+        <br>
+    </div>
+    <div class="banner animated tada table-responsive">
+        <div class=" big-text animated tada">PROMOTIONS</div>
+         <div>JUSQU'a 70%</div>
+         <a href="products.html#P">Go to store</a>
+       </div>
+    <div class="container">
+    <!-------------------- featured photos ---------------->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img  src="images/h1.jpg">
+                </div>
+                <div class="col-3">
+                    <img  src="images/h2.jfif">
+                </div>
+                <div class="col-3">
+                    <img src="images/h2.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--categories-->
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home active fa-lg" style="color:blue;"></i>
+            <strong>Home</strong></a></li>
+          <li class="breadcrumb-item active" aria-current="page">categories</li>
+        </ol>
+      </nav>          
+</div>
+    
+    <div class="small-container" id="container1">
+        <div class="row">
+            <div class="col-4">
+                <a href="products.html#Pneus"><img src="images/c1.PNG">
+                 <h4 style='text-align:center;'>Pneus</h4></a>
+            </div>
+
+            <div class="col-4">
+                <a href="products.html#Moteur"><img src="images/c2.PNG">
+                    <h4 style='text-align:center;'>Piéces moteur</h4>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="products.html#Batterie"><img src="images/c3.jpg">
+                    <h4 style='text-align:center;'>Batteries</h4>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="products.html#Metal"><img src="images/c4.jfif">
+                    <h4 style='text-align:center;'>Metaux recyclables</h4>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <a href="products.html#Batterie"><img src="images/c5.jpg">
+                    <h4 style='text-align:center;'>Piéces electriques</h4>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="products.html#Tole"><img src="images/c6.jpg">
+                    <h4 style='text-align:center;'>Tole voiture</h4>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="products.html#Jante"><img src="images/c7.jfif">
+                    <h4 style='text-align:center;'>Jantes</h4>
+                </a>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+
+
+
+
+    <!-------------------- featured products ---------------->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4 "id="myBtn1">
+                <img src="images/p1.png">
+                    <h4>Pneus michelin</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+
+            </div>
+
+            <div class="col-4">
+                <img src="images/p2.jpg"  class="myImg">
+                <h4>Moteur d’occasion CZG CZGB / AUDI / 2.5 / 367
+                </h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p3.png" class="myImg"  >
+                <h4>Pare choc avant BMW SERIE 3 E92 PHASE
+                </h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$200.00</s> &nbsp;&nbsp; &nbsp; <b> $60.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p4.png" class="myImg" >
+                <h4>Pare choc avant BMW SERIE 5 E60 PHASE 2 Diesel</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p ><s>$200.00</s> &nbsp;&nbsp; &nbsp; <b> $60.00</b></p>
+            </div>
+        </div>
+
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="products-details.html#Produit"><img src="images/pc4.jfif"></a>
+                <a href="products-details.html#Produit"></a>
+                <h4>Pare-choc AV-Calandre-Opt AVD Golf 6</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$200.00</s> &nbsp;&nbsp; &nbsp; <b> $60.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p6.jpg"  class="myImg">
+                <h4>Allimium reyclable</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p7.jpg" class="myImg">
+                <h4>Fer recyclable</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p8.jpg" class="myImg">
+                <h4>déchets de ferraille</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/p9.jpg" class="myImg">
+                <h4>Pneus de tracteur agricole bon état</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p10.jpg" class="myImg">
+                <h4>VW golf accidentée</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p11.jpg" class="myImg">
+                <h4>chart de combat mauvais etat</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p ><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b></p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p12.jpg" class="myImg">
+                <h4>MI-35 helicopter</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p ><s>$200.00</s> &nbsp;&nbsp; &nbsp; <b> $60.00</b></p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- -------------- testimonial -------------  -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="images/mouheb.jpg">
+                    <h3>Mouheb 2020</h3>
+                </div>
+
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="images/mouheb.jpg">
+                    <h3>Mouheb Hamza</h3>
+                </div>
+
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <img src="images/mouheb.jpg">
+                    <h3>Mouheb 2021</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------- brands --------------  -->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/porsche.jpg">
+                </div>
+                <div class="col-5">
+                    <img src="images/lambo.jpg">
+                </div>
+                <div class="col-5">
+                    <img src="images/mercedes.jpg">
+                </div>
+                <div class="col-5">
+                    <img src="images/audi.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/bmw.png">
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+  
+    <!-- Modal Content (The Image) -->
+    <div class="modal-content">
+    <img  id="img01">
+    </div>
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+
+  <!-- The Modal -2-->
+<div id="myModal1" class="modal1">
+
+    <!-- Modal content -->
+    <div class="modal1-content table-responsive">
+        <div class="modal1-header">
+            <span class="close1">&times;</span>
+        </div>
+  
+      <div class="modal1-body table-responsive">
+      <div class="small-container single-product">
+          <div class="row">
+              <div class="col-2">
+                  <img src="images/p1.png" width="100%" id="ProductImg">
+  
+                  <div class="small-img-row">
+                      <div class="small-img-col">
+                          <img src="images/pn1.jfif" width="100%" class="small-img">
+                      </div>
+                      <div class="small-img-col">
+                          <img src="images/pn2.jfif" width="100%" class="small-img">
+                      </div>
+                      <div class="small-img-col">
+                          <img src="images/pn4.jpg" width="100%" class="small-img">
+                      </div>
+                      <div class="small-img-col">
+                          <img src="images/pn3.jpg" width="100%" class="small-img">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-2">
+                  <p>Home /Pneus</p>
+                  <h1>Pneus michelin 185/65 r15</h1>
+                  <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+                  </h4>
+                  <select>
+                      <option>Select region</option>
+                      <option>Tunis</option>
+                      <option>Sousse</option>
+                      <option>Bizert</option>
+                      <option>Sfax</option>
+                      <option>Nabeul</option>
+                  </select>
+                  <a href="" class="btn" onclick="window.open('Cart.html')">Add To Cart</a>
+                  <h3>Product Details <i class="fa fa-indent"></i></h3>
+                  <br>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+              </div>
+          </div>
+      </div>
+      </div>
+  
+    </div>
+  
+  </div>
+  
+
+
+</div>
+
+    <!-- ------------------ footer ----------------  -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo2.png">
+                    <p>Our Purpose Is To Sustainably Make th Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> © Copyright 2020/2021 - Mouheb Hamza</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+        //modal1
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img =$('.myImg');
+            var modalImg = $("#img01");
+            var captionText = document.getElementById("caption");
+            $('.myImg').click(function(){
+            modal.style.display = "block";
+            var newSrc = this.src;
+            modalImg.attr('src', newSrc);
+            captionText.innerHTML = this.alt;
+            });
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+
+    </script>
+    <script>
+        // Get the modal2
+        var modal1 = document.getElementById("myModal1");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn1");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close1")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal1.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal1.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal1) {
+            modal1.style.display = "none";
+          }
+        }
+    </script>
+
+        
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+        
+                SmallImg[0].onclick = function() {
+                    ProductImg.src = SmallImg[0].src;
+                }
+                SmallImg[1].onclick = function() {
+                    ProductImg.src = SmallImg[1].src;
+                }
+                SmallImg[2].onclick = function() {
+                    ProductImg.src = SmallImg[2].src;
+                }
+                SmallImg[3].onclick = function() {
+                    ProductImg.src = SmallImg[3].src;
+        }
+    </script>
+</body>
+
+</html>

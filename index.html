@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferraille</title>
+    <link rel="shortcut icon" href="images/icon.png" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#e6f2ff;">
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html"><img src="images/logo1.png" width="125px"></a>
+    <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;"></i>    Home</a>
+    <a href="product.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Products</a>
+    <a href="index.html#Contact"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Contact</a>
+    <a href="#myModal"  data-toggle="modal"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Account</a>
+    <a href="panier.html" ><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>    Cart</a>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i></a>
+      <br>
+
+  </div>
+
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">				
+          <h4 class="modal-title">Member Login</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form method="post">
+            <div class="form-group">
+              <i class="fa fa-user"></i>
+              <input type="text" class="form-control" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-lock"></i>
+              <input type="password" class="form-control" placeholder="Password" required="required">					
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+            </div>
+          </form>				
+          
+        </div>
+        <div class="modal-footer">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>     
+
+  <div class="row" id="Contact">
+
+    <div class="header-widget header-widget--work-hours">
+      <span class="header-widget__icon fa fa-clock-o fa-3x"></span>
+      <div class="header-widget__body">
+        Working Hours:<br>
+        Mon - Fri: 7:30 am - 6:30 pm<br>
+        Sat - Sun: 10:30 am - 5:30 pm
+      </div>
+    </div>
+
+    <div class="header-widget header-widget--location">
+      <span class="header-widget__icon fa fa-map-marker fa-3x"></span>
+      <div class="header-widget__body">
+        Location:<br>
+        Rue Hedi Nuira, 1023 Tunis
+      </div>
+    </div>
+
+    <div class="header-widget header-widget--contacts">
+      <span class="header-widget__icon fa fa-comments-o fa-3x"></span>
+      <div class="header-widget__body">
+        Skype: mouhebHamza<br>
+        Whatsapp: +216 55 55 55 55<br>
+        Twitter: @mouheb_hamza
+      </div>
+
+    </div>
+
+  </div>
+  <div class="banner animated tada table-responsive">
+    <div class=" big-text animated tada">PROMOTIONS</div>
+     <div>JUSQU'a 70%</div>
+     <a href="products.html#P">Go to store</a>
+   </div>
+
+
+    <br><br><br>    
+<!--categories-->
+<div class="container">
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home active fa-lg" style="color:blue;"></i>
+          <strong>Home</strong></a></li>
+        <li class="breadcrumb-item active" aria-current="page">categories</li>
+      </ol>
+    </nav>          
+</div>
+  
+
+
+<div class="small_container" id="container1">
+
+  <div class="grid-container">
+
+    <article id="3685" class="location-listing">
+
+      <a class="location-title" href="products.html">
+          pneus           </a>
+
+      <div class="location-image">
+        <a href="#">
+            <img width="300" height="269" src="images/p1.jpg" alt="pneus">    </a>
+
+      </div>
+
+    </article>
+
+    <article id="3688" class="location-listing">
+
+      <a class="location-title" href="products.html">
+        Freins</a>
+
+      <div class="location-image">
+        <a href="#">
+            <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/london-768x432.jpg" alt="london">  </a>
+
+      </div>
+
+    </article>
+
+    <article id="3691" class="location-listing">
+
+      <a class="location-title" href="#">
+          New York            </a>
+
+      <div class="location-image">
+        <a href="#">
+            <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/new-york-768x432.jpg" alt="new york">  </a>
+
+      </div>
+
+    </article>
+
+    <article id="3694" class="location-listing">
+
+      <a class="location-title" href="#">
+          Cape Town           </a>
+
+      <div class="location-image">
+        <a href="#">
+            <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cape-town-768x432.jpg" alt="cape town">  </a>
+
+      </div>
+
+    </article>
+
+    <article id="3697" class="location-listing">
+
+      <a class="location-title" href="#">
+          Beijing           </a>
+
+      <div class="location-image">
+        <a href="#">
+            <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/beijing-768x432.jpg" alt="beijing">    </a>
+
+      </div>
+
+    </article>
+
+    <article id="3700" class="location-listing">
+
+      <a class="location-title" href="#">
+          Paris           </a>
+
+      <div class="location-image">
+        <a href="#">
+            <img width="300" height="169" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/paris-768x432.jpg" alt="paris">          
+          </a>
+      </div>
+
+    </article>
+
+  </div>
+  <!-- end grid container -->
+</div>
+</div>
+
+
+
+
+</div>
+  
+
+<br> <br>
+
+
+
+  
+  <footer>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-5 offset-1 col-sm-2">
+                <img src="images/logo2.png" style="max-width: 150px;max-height:150px ;">
+              </div>
+              <div class="col-6 col-sm-5">
+
+              </div>
+              <div class="col col-sm-4 align-self-center">
+                  <div style="text-align:center">
+                      <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                      <a class=" btn btn-fb" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook left"></i></a>
+                      <a class="btn " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                      <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                      <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                      <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-center">
+              <div class="col-auto">
+                  <p>© Copyright 2020 Mouheb Hamza 2021</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+</body>
+</html>
+

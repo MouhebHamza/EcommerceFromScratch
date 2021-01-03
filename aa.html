@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RedStore</title>
+    <link rel="shortcut icon" href="images/icon.png" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo1.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;"></i>    Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html#Contact">Contact</a></li>
+                    <li><a href="account.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>    Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+    </div>
+    <div class="banner animated tada table-responsive">
+        <div class=" big-text animated tada">PROMOTIONS</div>
+         <div>JUSQU'a 70%</div>
+         <a href="products.html#P">Go to store</a>
+       </div>
+    <div class="container">
+    <!-- ------------ single products details -----------------  -->
+    <div class="small-container single-product"id="Produit">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/pc4.jfif" width="100%" id="ProductImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/pc4.jfif" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/pc1.jfif" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/pc2.jfif" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/pc3.jfif" width="100%" class="small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Home /Pare-choc</p>
+                <h1>Pare-choc AV-Calandre-Opt AVD Golf 6</h1>
+                <h4> <s>$200.00</s> &nbsp;&nbsp; &nbsp; <b> $60.00</b>
+                </h4>
+                <select>
+                    <option>Select region</option>
+                    <option>Tunis</option>
+                    <option>Sousse</option>
+                    <option>Bizert</option>
+                    <option>Sfax</option>
+                    <option>Nabeul</option>
+                </select>
+                <a href="" class="btn" onclick="window.open('Cart.html')">Add To Cart</a>
+                <h3>Product Details <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------title--------------  -->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View more</p>
+        </div>
+    </div>
+
+    <!-- --------------products--------------  -->
+
+    <div class="small-container">
+
+        <div class="row">
+            <div class="col-4">
+                <img src="images/p3.png" >
+                <h4>Pare choc avant BMW SERIE 3 E92 PHASE
+                </h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p4.png" >
+                <h4>Pare choc avant BMW SERIE 5 E60 PHASE 2 Diesel</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p3.png" >
+                <h4>Pare choc avant BMW SERIE 3 E92 PHASE
+                </h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+
+            <div class="col-4">
+                <img src="images/p4.png" >
+                <h4>Pare choc avant BMW SERIE 5 E60 PHASE 2 Diesel</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <!-- ------------------ footer ----------------  -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our Purpose Is To Sustainably Make th Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> © Copyright 2020/2021 - Mouheb Hamza</p>
+        </div>
+    </div>
+
+    <!-- ------------ js for toggle menu -----------  -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!-- ------------ js for product gallery --------------  -->
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function() {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function() {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function() {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function() {
+            ProductImg.src = SmallImg[3].src;
+        }
+    </script>
+</body>
+
+</html>
