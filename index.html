@@ -6,6 +6,7 @@
     <title>Ferraille</title>
     <link rel="shortcut icon" href="images/icon.png" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loginModal.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -15,6 +16,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="js/modal.js"></script>
+
 </head>
 <body style="background-color:#e6f2ff;">
 
@@ -23,7 +27,7 @@
     <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;"></i>    Home</a>
     <a href="products.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Products</a>
     <a href="index.html#Contact"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Contact</a>
-    <a href="#myModal"  data-toggle="modal"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Account</a>
+
     <a href="panier.html" ><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>    Cart</a>
 
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -32,35 +36,13 @@
 
   </div>
 
-  <div id="myModal" class="modal fade">
-    <div class="modal-dialog modal-login">
-      <div class="modal-content">
-        <div class="modal-header">				
-          <h4 class="modal-title">Member Login</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <form method="post">
-            <div class="form-group">
-              <i class="fa fa-user"></i>
-              <input type="text" class="form-control" placeholder="Username" required="required">
-            </div>
-            <div class="form-group">
-              <i class="fa fa-lock"></i>
-              <input type="password" class="form-control" placeholder="Password" required="required">					
-            </div>
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
-            </div>
-          </form>				
-          
-        </div>
-        <div class="modal-footer">
-          <a href="#">Forgot Password?</a>
-        </div>
-      </div>
-    </div>
-  </div>     
+
+
+
+
+
+
+
 
   <div class="row" id="Contact">
 
@@ -124,7 +106,7 @@
 
       <div class="location-image">
         <a href="#">
-            <img width="300" height="269" src="images/p1.jpg" alt="pneus">    </a>
+            <img width="300" height="269" src="images/c1.jfif" alt="pneus">    </a>
 
       </div>
 
@@ -133,11 +115,11 @@
     <article id="3688" class="location-listing">
 
       <a class="location-title" href="products.html">
-        Freins</a>
+        Jantes</a>
 
       <div class="location-image">
         <a href="#">
-          <img width="300" height="269" src="images/p1.jpg" alt="pneus">    </a>
+          <img width="300" height="269" src="images/c2.jpg" alt="pneus">    </a>
 
       </div>
 
@@ -145,12 +127,12 @@
 
     <article id="3691" class="location-listing">
 
-      <a class="location-title" href="#">
-          New York            </a>
+      <a class="location-title" href="products.html">
+          Metaux recyclables            </a>
 
       <div class="location-image">
         <a href="#">
-          <img width="300" height="269" src="images/p1.jpg" alt="pneus">    </a>
+          <img width="300" height="269" src="images/c3.jpg" alt="pneus">    </a>
 
       </div>
 
@@ -158,12 +140,12 @@
 
     <article id="3694" class="location-listing">
 
-      <a class="location-title" href="#">
-          Cape Town           </a>
+      <a class="location-title" href="products.html">
+          Tole voiture           </a>
 
       <div class="location-image">
         <a href="#">
-          <img width="300" height="269" src="images/p1.jpg" alt="pneus">    </a>
+          <img width="300" height="269" src="images/c4.jfif" alt="pneus">    </a>
 
       </div>
 
@@ -171,12 +153,12 @@
 
     <article id="3697" class="location-listing">
 
-      <a class="location-title" href="#">
-          Beijing           </a>
+      <a class="location-title" href="products.html">
+          Pare-choc           </a>
 
       <div class="location-image">
         <a href="#">
-          <img width="300" height="269" src="images/p1.jpg" alt="pneus">    </a>
+          <img width="300" height="269" src="images/c5.jfif" alt="pneus">    </a>
 
       </div>
 
@@ -184,12 +166,12 @@
 
     <article id="3700" class="location-listing">
 
-      <a class="location-title" href="#">
-          Paris           </a>
+      <a class="location-title" href="products.html">
+          Capot          </a>
 
       <div class="location-image">
         <a href="#">
-          <img width="300" height="269" src="images/p1.jpg" alt="pneus">    </a>
+          <img width="300" height="269" src="images/c6.jpg" alt="pneus">    </a>
         </a>
       </div>
 
@@ -240,6 +222,7 @@
           </div>
       </div>
   </footer>
+
 </body>
 </html>
 
