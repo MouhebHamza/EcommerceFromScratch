@@ -1,40 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferraille</title>
-    <link rel="shortcut icon" href="images/icon.png" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/loginModal.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferraille</title>
+  <link rel="shortcut icon" href="images/icon.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loginModal.css">
+  <link rel="stylesheet" href="css/signupmodal.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-    <script src="js/modal.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="js/modal.js"></script>
+  <script src="js/app.js"></script>
 
 </head>
+
 <body style="background-color:#e6f2ff;">
 
   <div class="topnav" id="myTopnav">
     <a href="index.html"><img src="images/logo1.png" width="125px"></a>
-    <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;"></i>    Home</a>
-    <a href="products.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Products</a>
-    <a href="index.html#Contact"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Contact</a>
+    <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;">&nbsp;</i> &nbsp;<b><font size="+2">Home</font></b>&nbsp;</a>
+    <a href="products.html"><i class="fa fa-dropbox fa-2x" style="color:red;">&nbsp;</i>&nbsp;<b><font size="+2">Produits</font></b>&nbsp;</a>
+    <a href="index.html#Contact"><i class="fa fa-phone fa-2x" style="color:blue;">&nbsp;</i>&nbsp;<b><font size="+2">Contact</font></b>&nbsp;</a>
 
-    <a href="panier.html" ><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>    Cart</a>
+    <a href="panier.html"><i class="fa fa-cart-plus fa-2x" style="color:blue;">&nbsp;</i> &nbsp;<b><font size="+2">Panier</font></b>&nbsp;&nbsp;</a>
+    <ul class="nav navbar-nav navbar-right">
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">&nbsp;<b><font size="+2">Login</font></b>&nbsp;&nbsp;</button>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+       <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">&nbsp;<b><font size="+2">signUp</font></b>&nbsp;&nbsp;</button></li> 
+ 
+     </ul>
 
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i></a>
-      <br>
+    <br>
 
   </div>
+
+  <area>
+  <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="#" method="post">
+      <div class="imgcontainer1">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="images/mouheb.jpg" style="width: 300px;" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container1">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container1" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+ </area>
+
+ <div id="id02" class="modal2">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+  <form class="modal-content2" action="#">
+    <div class="container2">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+        <button type="submit" class="signupbtn2">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 
 
 
@@ -75,154 +152,169 @@
 
   </div>
   <div class="banner animated tada table-responsive">
-    <div class=" big-text animated tada">PROMOTIONS</div>
-     <div>JUSQU'a 70%</div>
-     <a href="products.html#P">Go to store</a>
-   </div>
-
-
-    <br><br><br>    
-<!--categories-->
-<div class="container">
-  <nav aria-label="breadcrumb">
+    <div class=" big-text animated tada">PROMOTION</div>
+    <div>Tous les produits à 50$</div>
+    <a href="products.html#P">Go to store</a>
+  </div>
+  <br><br><br>
+  <!--categories-->
+  <div class="container">
+    <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home active fa-lg" style="color:blue;"></i>
-          <strong>Home</strong></a></li>
+            <strong>Home</strong></a></li>
         <li class="breadcrumb-item active" aria-current="page">categories</li>
       </ol>
-    </nav>          
-</div>
-  
+    </nav>
+  </div>
+  <div class="small_container" id="container1">
+    <div class="grid-container">
+      <article id="3685" class="location-listing">
+        <a class="location-title" href="products.html">
+          pneus </a>
+        <div class="location-image">
+          <a href="#">
+            <img width="300" height="269" src="images/c1.jfif" alt="pneus"> </a>
+        </div>
+      </article>
+      <article id="3688" class="location-listing">
+        <a class="location-title" href="products.html">
+          Jantes</a>
+        <div class="location-image">
+          <a href="#">
+            <img width="300" height="269" src="images/c2.jpg" alt="pneus"> </a>
+        </div>
+      </article>
+      <article id="3691" class="location-listing">
+        <a class="location-title" href="products.html">
+          Metaux recyclables </a>
+        <div class="location-image">
+          <a href="#">
+            <img width="300" height="269" src="images/c3.jpg" alt="pneus"> </a>
+        </div>
+      </article>
 
+      <article id="3694" class="location-listing">
 
-<div class="small_container" id="container1">
+        <a class="location-title" href="products.html">
+          Tole voiture </a>
 
-  <div class="grid-container">
+        <div class="location-image">
+          <a href="#">
+            <img width="300" height="269" src="images/c4.jfif" alt="pneus"> </a>
 
-    <article id="3685" class="location-listing">
+        </div>
 
-      <a class="location-title" href="products.html">
-          pneus           </a>
+      </article>
 
-      <div class="location-image">
-        <a href="#">
-            <img width="300" height="269" src="images/c1.jfif" alt="pneus">    </a>
+      <article id="3697" class="location-listing">
 
-      </div>
+        <a class="location-title" href="products.html">
+          Pare-choc </a>
 
-    </article>
+        <div class="location-image">
+          <a href="#">
+            <img width="300" height="269" src="images/c5.jfif" alt="pneus"> </a>
 
-    <article id="3688" class="location-listing">
+        </div>
 
-      <a class="location-title" href="products.html">
-        Jantes</a>
+      </article>
 
-      <div class="location-image">
-        <a href="#">
-          <img width="300" height="269" src="images/c2.jpg" alt="pneus">    </a>
+      <article id="3700" class="location-listing">
 
-      </div>
+        <a class="location-title" href="products.html">
+          Capot </a>
 
-    </article>
+        <div class="location-image">
+          <a href="#">
+            <img width="300" height="269" src="images/c6.jpg" alt="pneus"> </a>
+          </a>
+        </div>
 
-    <article id="3691" class="location-listing">
+      </article>
 
-      <a class="location-title" href="products.html">
-          Metaux recyclables            </a>
-
-      <div class="location-image">
-        <a href="#">
-          <img width="300" height="269" src="images/c3.jpg" alt="pneus">    </a>
-
-      </div>
-
-    </article>
-
-    <article id="3694" class="location-listing">
-
-      <a class="location-title" href="products.html">
-          Tole voiture           </a>
-
-      <div class="location-image">
-        <a href="#">
-          <img width="300" height="269" src="images/c4.jfif" alt="pneus">    </a>
-
-      </div>
-
-    </article>
-
-    <article id="3697" class="location-listing">
-
-      <a class="location-title" href="products.html">
-          Pare-choc           </a>
-
-      <div class="location-image">
-        <a href="#">
-          <img width="300" height="269" src="images/c5.jfif" alt="pneus">    </a>
-
-      </div>
-
-    </article>
-
-    <article id="3700" class="location-listing">
-
-      <a class="location-title" href="products.html">
-          Capot          </a>
-
-      <div class="location-image">
-        <a href="#">
-          <img width="300" height="269" src="images/c6.jpg" alt="pneus">    </a>
-        </a>
-      </div>
-
-    </article>
+    </div>
+    <!-- end grid container -->
 
   </div>
-  <!-- end grid container -->
-  
-</div>
-</div>
+  </div>
+  </div>
 
+  <br> <br>
 
-
-
-</div>
-
-<br> <br>
-
-
-
-  
   <footer>
 
     <footer class="footer">
       <div class="container">
-          <div class="row">
-              <div class="col-5 offset-1 col-sm-2">
-                <img src="images/logo2.png" style="max-width: 150px;max-height:150px ;">
-              </div>
-              <div class="col-6 col-sm-5">
+        <div class="row">
+          <div class="col-5 offset-1 col-sm-2">
+            <img src="images/logo2.png" style="max-width: 150px;max-height:150px ;">
+          </div>
+          <div class="col-6 col-sm-5">
 
-              </div>
-              <div class="col col-sm-4 align-self-center">
-                  <div style="text-align:center">
-                      <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                      <a class=" btn btn-fb" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook left"></i></a>
-                      <a class="btn " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                      <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                      <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                      <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
-                  </div>
-              </div>
           </div>
-          <div class="row justify-content-center">
-              <div class="col-auto">
-                  <p>© Copyright 2020 Mouheb Hamza 2021</p>
-              </div>
+          <div class="col col-sm-4 align-self-center">
+            <div style="text-align:center">
+              <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+              <a class=" btn btn-fb" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook left"></i></a>
+              <a class="btn " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+              <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+              <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+              <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+            </div>
           </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p>© Copyright 2020 Mouheb Hamza 2021</p>
+          </div>
+        </div>
       </div>
-  </footer>
+    </footer>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
 
+      function register() {
+          x.style.left = "-400px";
+          y.style.left = "50px";
+          z.style.left = "110px";
+      }
+
+      function login() {
+          x.style.left = "50px";
+          y.style.left = "450px";
+          z.style.left = "0px";
+      }
+  </script>
+ <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 </body>
-</html>
 
+</html>

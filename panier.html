@@ -1,286 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferraille</title>
-    <link rel="shortcut icon" href="images/icon.png" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/panier.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferraille</title>
+  <link rel="shortcut icon" href="images/icon.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/panier.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        background-color:#f2f2f2;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 12%;
+      }
+      
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      </style>
 </head>
-<body>
+
+<body onload="fetchCart()">
 
   <div class="topnav" id="myTopnav">
     <a href="index.html"><img src="images/logo1.png" width="125px"></a>
-    <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;"></i>    Home</a>
-    <a href="products.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Products</a>
-    <a href="index.html#Contact"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Contact</a>
-    <a href="account.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>    Account</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;">&nbsp;</i> &nbsp;<b><font size="+2">Home</font></b>&nbsp;</a>
+    <a href="products.html"><i class="fa fa-box fa-2x" style="color:black;">&nbsp;</i>&nbsp;<b><font size="+2">Produits</font></b>&nbsp;</a>
+    <a href="index.html#Contact"><i class="fa fa-phone fa-2x" style="color:blue;">&nbsp;</i>&nbsp;<b><font size="+2">Contact</font></b>&nbsp;</a>
+    <a href="panier.html"><i class="fa fa-cart-plus fa-2x" style="color:blue;">&nbsp;</i> &nbsp;<b><font size="+2">Panier</font></b>&nbsp;&nbsp;</a>
+     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i></a>
-      <br>
+    <br>
 
   </div>
+
+  <div class="banner animated tada table-responsive">
+    <div class=" big-text animated tada">PROMOTION</div>
+    <div>Tous les produits à 50$</div>
+    <a href="products.html#P">Go to store</a>
+  </div>
+  <br><br><br>
   <div class="container">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home active fa-lg" style="color:blue;"></i>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home active fa-lg" style="color:blue;"></i>
             <strong>Home</strong></a></li>
-          <li class="breadcrumb-item active" aria-current="page">Panier</li>
-        </ol>
-      </nav>          
+        <li class="breadcrumb-item active" aria-current="page">Panier</li>
+      </ol>
+    </nav>
   </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content" id="ch">
+      <span class="close">&times;</span>
+      <div class="row1">
+        <div class="col-751">
+          <div class="container1">
+            <form action="#">
+            
+              <div class="row1">
+                <div class="col-501">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text1" id="fname" name="firstname" placeholder="John M. Doe">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text1" id="email" name="email" placeholder="john@example.com">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text1" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text1" id="city" name="city" placeholder="New York">
+      
+                  <div class="row1">
+                    <div class="col-501">
+                      <label for="state">State</label>
+                      <input type="text1" id="state" name="state" placeholder="NY">
+                    </div>
+                    <div class="col-501">
+                      <label for="zip">Zip</label>
+                      <input type="text1" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-501">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <div class="icon-container1">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text1" id="cname" name="cardname" placeholder="John More Doe">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text1" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text1" id="expmonth" name="expmonth" placeholder="September">
+                  <div class="row1">
+                    <div class="col-501">
+                      <label for="expyear">Exp Year</label>
+                      <input type="text1" id="expyear" name="expyear" placeholder="2018">
+                    </div>
+                    <div class="col-501">
+                      <label for="cvv">CVV</label>
+                      <input type="text1" id="cvv" name="cvv" placeholder="352">
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+              </label>
+              <input type="submit" value="Continue to checkout" class="btn1" onclick="JSalert()">
+            </form>
+          </div>
+        </div>
+      </div>    </div>
+  
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="container-fluid">
     <div class="row">
-    <div class="col-md-10 col-11 mx-auto">
-    <div class="row mt-5 gx-3">
-    <!-- left side div -->
-    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
-    <div class="card p-4">
-    <h2 class="py-4 font-weight-bold">Cart (2 items)</h2>
-    <div class="row">
-    <!-- cart images div -->
-    <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
-    <img src="images/p5.png" class="img-fluid" alt="cart img">
-    </div>
+      <div class="col-md-10 col-11 mx-auto">
+        <div class="row mt-5 gx-3">
+          <!-- left side div -->
+          <div class='col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow'>
+            <h2 class='py-4 font-weight-bold' id='itemsCount'></h2>
+            <div id="cartList">
 
-
-    <!-- cart product details -->
-<div class="col-md-7 col-11 mx-auto px-4 mt-2">
-    <div class="row">
-    <!-- product name  -->
-    <div class="col-6 card-title">
-    <h1 class="mb-4 product_name">batterie</h1>
-    <p class="mb-2">bon état</p>
-    <p class="mb-2">VARTA</p>
-    <p class="mb-3">13V</p>
-    </div>
-    <!-- quantity inc dec -->
-    <div class="col-6">
-    <ul class="pagination justify-content-end set_quantity">
-    <li class="page-item">
-    <button class="page-link " onclick="decreaseNumber('textbox','itemval')">
-    <i class="fas fa-minus"></i> </button>
-    </li>
-    <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox" >
-    </li>
-    <li class="page-item">
-    <button class="page-link" onclick="increaseNumber('textbox','itemval')"> <i class="fas fa-plus"></i></button>
-    </li>
-    </ul>
-    </div>
-    </div>
-    <!-- //remover move and price -->
-    <div class="row">
-    <div class="col-8 d-flex justify-content-between remove_wish">
-    <p ><i class="fas fa-trash-alt" ></i> REMOVE ITEM</p>
-    <p><i class="fas fa-heart"></i>MOVE TO WISH LIST </p>
-    </div>
-    <div class="col-4 d-flex justify-content-end price_money">
-    <h3>$<span id="itemval">0.00 </span></h3>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <hr/>
-    <!-- 2nd cart product -->
-    <div class="card p-4">
-    <div class="row">
-    <!-- cart images div -->
-    <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
-    <img src="images/p4.png" class="img-fluid" alt="cart img">
-    </div>
-<!-- cart product details -->
-<div class="col-md-7 col-11 mx-auto px-4 mt-2">
-    <div class="row">
-    <!-- product name  -->
-    <div class="col-6 card-title">
-    <h1 class="mb-4 product_name">Pare choc avant   </h1>
-    <p class="mb-2">BMW SERIE 5</p>
-    <p class="mb-2">E60</p>
-    <p class="mb-3">PHASE 2 Diesel</p>
-    </div>
-    <!-- quantity inc dec -->
-    <div class="col-6">
-    <ul class="pagination justify-content-end set_quantity">
-    <li class="page-item">
-    <button class="page-link " onclick="decreaseNumber('textbox1','itemval1')"> <i class="fas fa-minus"></i> </button>
-    </li>
-    <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox1" >
-    </li>
-    <li class="page-item">
-    <button class="page-link" onclick="increaseNumber('textbox1','itemval1')"> <i class="fas fa-plus"></i></button>
-    </li>
-    </ul>
-    </div>
-    </div>
-    <!-- //remover move and price -->
-    <div class="row">
-    <div class="col-8 d-flex justify-content-between remove_wish">
-    <p><i class="fas fa-trash-alt"></i>  REMOVE ITEM</p>
-    <p><i class="fas fa-heart"></i>  MOVE TO WISH LIST </p>
-    </div>
-    <div class="col-4 d-flex justify-content-end price_money">
-    <h3>$<span id="itemval1">0.00 </span> </h3>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- right side div -->
-    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
-    <div class="right_side p-3 shadow bg-white">
-    <h2 class="product_name mb-5">The Total Amount Of</h2>
-    <div class="price_indiv d-flex justify-content-between">
-    <p>Product amount</p>
-    <p>$<span id="product_total_amt">0.00</span></p>
-    </div>
-    <div class="price_indiv d-flex justify-content-between">
-    <p>Shipping Charge</p>
-    <p>$<span id="shipping_charge">20.0</span></p>
-    </div>
-    <hr />
-    <div class="total-amt d-flex justify-content-between font-weight-bold">
-    <p>The total amount of (including TVA)</p>
-    <p>$<span id="total_cart_amt">0.00</span></p>
-    </div>
-    <button class="btn btn-primary text-uppercase" onclick="JSalert()">Checkout</button>
-    </div>
-    <!-- discount code part -->
-    <div class="discount_code mt-3 shadow">
-    <div class="card">
-    <div class="card-body">
-    <a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Add a discount code (optional)
-    <span><i class="fas fa-chevron-down pt-1"></i></span>
-    </a>
-    <div class="collapse" id="collapseExample">
-    <div class="mt-3">
-    <input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="Enter the discount code">
-    <small id="error_trw" class="text-dark mt-3">code is Mouheb2021</small>
-    </div>
-    <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- discount code ends -->
-<div class="mt-3 shadow p-3 bg-white">
-    <div class="pt-4">
-    <h5 class="mb-4">Expected delivery date</h5>
-    <p>Jan 27th 2021 - Jan 29th 2021</p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>    
-<br>
-<br>
-<footer>
-
-  <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-5 offset-1 col-sm-2">
-              <img src="images/logo2.png" style="max-width: 150px;max-height:150px ;">
-            </div>
-            <div class="col-6 col-sm-5">
+              <!-- 2nd cart product -->
 
             </div>
-            <div class="col col-sm-4 align-self-center">
-                <div style="text-align:center">
-                    <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                    <a class=" btn btn-fb" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook left"></i></a>
-                    <a class="btn " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                    <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+
+          </div>
+          <!-- right side div -->
+          <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+            <div class="right_side p-3 shadow bg-white">
+              <h2 class="product_name mb-5">The Total Amount Of</h2>
+              <div class="price_indiv d-flex justify-content-between">
+                <p>Product amount</p>
+                <p>$<span id="product_total_amt">0.00</span></p>
+              </div>
+              <div class="price_indiv d-flex justify-content-between">
+                <p>Shipping Charge</p>
+                <p>$<span id="shipping_charge">20.0</span></p>
+              </div>
+              <hr />
+              <div class="total-amt d-flex justify-content-between font-weight-bold">
+                <p>The total amount of (including TVA)</p>
+                <p>$<span id="total_cart_amt">0.00</span></p>
+              </div>
+              <button class="btn btn-primary text-uppercase"id="myBtn" >Checkout</button>
+            </div>
+            <!-- discount code part -->
+            <div class="discount_code mt-3 shadow">
+              <div class="card">
+                <div class="card-body">
+                  <a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    Add a discount code (optional)
+                    <span><i class="fas fa-chevron-down pt-1"></i></span>
+                  </a>
+                  <div class="collapse" id="collapseExample">
+                    <div class="mt-3">
+                      <input type="text" name="" id="discount_code1" class="form-control font-weight-bold"
+                        placeholder="Enter the discount code">
+                      <small id="error_trw" class="text-dark mt-3">code is Mouheb2021</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+                  </div>
                 </div>
+              </div>
             </div>
+            <!-- discount code ends -->
+            <div class="mt-3 shadow p-3 bg-white">
+              <div class="pt-4">
+                <h5 class="mb-4">Expected delivery date</h5>
+                <p>Jan 27th 2021 - Jan 29th 2021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <footer>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-5 offset-1 col-sm-2">
+            <img src="images/logo2.png" style="max-width: 150px;max-height:150px ;">
+          </div>
+          <div class="col-6 col-sm-5">
+
+          </div>
+          <div class="col col-sm-4 align-self-center">
+            <div style="text-align:center">
+              <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+              <a class=" btn btn-fb" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook left"></i></a>
+              <a class="btn " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+              <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+              <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+              <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+            </div>
+          </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-auto">
-                <p>© Copyright 2020 Mouheb Hamza 2021</p>
-            </div>
+          <div class="col-auto">
+            <p>© Copyright 2020 Mouheb Hamza 2021</p>
+          </div>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
+  </body>
 
-<!-- Optional JavaScript -->
-<!-- Popper.js first, then Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-<script>
-var product_total_amt = document.getElementById('product_total_amt');
-var shipping_charge = document.getElementById('shipping_charge');
-var total_cart_amt = document.getElementById('total_cart_amt');
-var discountCode = document.getElementById('discount_code1');
-const decreaseNumber = (incdec, itemprice) => {
-var itemval = document.getElementById(incdec);
-var itemprice = document.getElementById(itemprice);
-console.log( itemprice.innerHTML);
-// console.log(itemval.value);
-if(itemval.value <= 0){
-itemval.value = 0;
-alert('Negative quantity not allowed');
-}else{
-itemval.value = parseInt(itemval.value) - 1;
-itemval.style.background = '#fff';
-itemval.style.color = '#000';
-itemprice.innerHTML  = parseInt(itemprice.innerHTML) - 50;
-product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) - 50;
-total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
-}
-}
-const increaseNumber = (incdec, itemprice) => {
-var itemval = document.getElementById(incdec);
-var itemprice = document.getElementById(itemprice);
-// console.log(itemval.value);
-if(itemval.value >= 1){
-itemval.value = 1;
-alert('max 1 allowed');
-itemval.style.background = 'red';
-itemval.style.color = '#fff';
-}else{
-itemval.value = parseInt(itemval.value) + 1;
-itemprice.innerHTML  = parseInt(itemprice.innerHTML ) + 50;
-product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + 50;
-total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
-}
-}
-const  discount_code = () => {
-let totalamtcurr = parseInt(total_cart_amt.innerHTML);
-let error_trw = document.getElementById('error_trw');
-if(discountCode.value === 'Mouheb2021'){
-let newtotalamt = totalamtcurr - 20;
-total_cart_amt.innerHTML = newtotalamt;
-error_trw.innerHTML = "Hurray! code is valid";
-}else{
-error_trw.innerHTML = "Try Again! Valid code is Mouheb2021";
-}
-};
+  </html>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script>
+      var product_total_amt = document.getElementById('product_total_amt');
+      var shipping_charge = document.getElementById('shipping_charge');
+      var total_cart_amt = document.getElementById('total_cart_amt');
+      var discountCode = document.getElementById('discount_code1');
+      const decreaseNumber = (incdec, itemprice) => {
+        // debugger
+        console.log(incdec, itemprice);
+        var itemval = document.getElementById(incdec);
+        var itemprice = document.getElementById(itemprice);
+        console.log(itemprice.innerHTML);
+        // console.log(itemval.value);
+        if (itemval.value <= 0) {
+          itemval.value = 0;
+          alert('Negative quantity not allowed');
+        } else {
+          itemval.value = parseInt(itemval.value) - 1;
+          itemval.style.background = '#fff';
+          itemval.style.color = '#000';
+          itemprice.innerHTML = parseInt(itemprice.innerHTML) - 50;
+          product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) - 50;
+          total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+        }
+      }
+      const increaseNumber = (incdec, itemprice) => {
+        // debugger
+        console.log(incdec, itemprice);
+        var itemval = document.getElementById(incdec);
+        var itemprice = document.getElementById(itemprice);
+        console.log(itemval.value);
+        if (itemval.value >= 1) {
+          itemval.value = 1;
+          alert('max 1 allowed');
+          itemval.style.background = 'red';
+          itemval.style.color = '#fff';
+        } else {
+          itemval.value = parseInt(itemval.value) + 1;
+          itemprice.innerHTML = parseInt(itemprice.innerHTML) + 50;
+          product_total_amt.innerHTML = parseInt(product_total_amt.innerHTML) + 50;
+          total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+        }
+      }
+      const discount_code = () => {
+        // debugger
+        let totalamtcurr = parseInt(total_cart_amt.innerHTML);
+        let error_trw = document.getElementById('error_trw');
+        if (discountCode.value === 'Mouheb2021') {
+          let newtotalamt = totalamtcurr - 20;
+          total_cart_amt.innerHTML = newtotalamt;
+          error_trw.innerHTML = "Hurray! code is valid";
+        } else {
+          error_trw.innerHTML = "Try Again! Valid code is Mouheb2021";
+        }
+      };
+      function JSalert() {
+        swal("Congrats!", "achat terminé avec succées!", "success");
+      };
 
+      let fetchCart = () => {
+        var items = getCart()
+        console.log(items);
+        var str = ""
+        items.forEach(item => {
+          str += "<div class='card p-4'><div class='row'><div class='col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img'><img src='" + item.img + "' class='img-fluid' alt='cart img'> </div> <!-- cart product details -->                <div class='col-md-7 col-11 mx-auto px-4 mt-2'>                  <div class='row'><div class='col-6 card-title'><h1 class='mb-4 product_name'>" + item.name + "</h1><p class='mb-2'>bon état</p><p class='mb-2'>VARTA</p> <p class='mb-3'>13V</p> </div> <div class='col-6'><ul class='pagination justify-content-end set_quantity'><li class='page-item'> <button class='page-link ' onclick=decreaseNumber('textbox" + item.id + "','itemval" + item.id + "')> <i class='fas fa-minus'></i> </button> </li> <li class='page-item'><input type='text' name='' class='page-link' value='0' id='textbox" + item.id + "'> </li>  <li class='page-item'> <button class='page-link' onclick=increaseNumber('textbox" + item.id + "','itemval" + item.id + "')> <i class='fas fa-plus'></i></button> </li></ul></div></div> <div class='row'><div class='col-8 d-flex justify-content-between remove_wish'> <button class='btn btn-danger text-uppercase' onclick=remove(" + item.id + ")><i class='fas fa-trash-alt'></i> REMOVE ITEM</button>                      <p><i class='fas fa-heart'></i>MOVE TO WISH LIST </p>                    </div>                    <div class='col-4 d-flex justify-content-end price_money'> <h3>$<span id='itemval" + item.id + "'>0.00</span></h3> </div>  </div>  </div>   </div> </div><hr />"
+        });
 
-function JSalert(){
-    swal("Congrats!", "achat terminé avec succées!", "success");
-};
+        document.getElementById('cartList').innerHTML = str
+        //setItems Count
+        document.getElementById("itemsCount").innerHTML = getCart().length + ' Items'
+      }
 
+      let remove = (id) => {
+        var items = getCart()
+        let filtered = items.filter((el) => el.id != id)
+        window.localStorage.setItem('cart', JSON.stringify(filtered))
+        fetchCart()
+        //TODO: ADAPT TOTAL AMOUNT AFTER REMOVE
+      }
+      let getCart = () => {
+        return JSON.parse(window.localStorage.getItem('cart')) || []
+      }
 
-
-</script>
-</body>
-</html>
+    </script>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>

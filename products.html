@@ -1,169 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferraille</title>
-    <link rel="shortcut icon" href="images/icon.png" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/product.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferraille</title>
+  <link rel="shortcut icon" href="images/icon.png" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/product.css">
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 </head>
+
 <body style="background-color:#e6f2ff;">
   <div class="topnav" id="myTopnav">
     <a href="index.html"><img src="images/logo1.png" width="125px"></a>
-    <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;"></i>    Home</a>
-    <a href="products.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Products</a>
-    <a href="index.html#Contact"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>Contact</a>
-    <a href="account.html"><i class="fa fa-user-circle fa-2x"  style="color:#fc03f8;"></i>    Account</a>
+    <a href="index.html"><i class="fa fa-home active fa-2x" style="color:black;">&nbsp;</i> &nbsp;<b><font size="+2">Home</font></b>&nbsp;</a>
+    <a href="products.html"><i class="fa fa-dropbox fa-2x" style="color:blue;">&nbsp;</i>&nbsp;<b><font size="+2">Produits</font></b>&nbsp;</a>
+    <a href="index.html#Contact"><i class="fa fa-phone fa-2x" style="color:blue;">&nbsp;</i>&nbsp;<b><font size="+2">Contact</font></b>&nbsp;</a>
+    <a href="panier.html"><i class="fa fa-cart-plus fa-2x" style="color:blue;">&nbsp;</i> &nbsp;<b><font size="+2">Panier</font></b>&nbsp;&nbsp;</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i></a>
-      <br>
+    <br>
 
   </div>
+
+  <div class="banner animated tada table-responsive">
+    <div class=" big-text animated tada">PROMOTION</div>
+    <div>Tous les produits à 50$</div>
+    <a href="products.html#P">Go to store</a>
+  </div>
+  <br><br><br>
   <div class="container">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home active fa-lg" style="color:blue;"></i>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home active fa-lg" style="color:blue;"></i>
             <strong>Home</strong></a></li>
-          <li class="breadcrumb-item active" aria-current="page">Products</li>
-        </ol>
-      </nav>          
+        <li class="breadcrumb-item active" aria-current="page">Products</li>
+      </ol>
+    </nav>
   </div>
   <div class="main">
 
     <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('nature')"> Pneus+Jantes</button>
-        <button class="btn" onclick="filterSelection('cars')"> Metaux+tole</button>
-        <button class="btn" onclick="filterSelection('people')"> Pare-choc+capot</button>
-      </div>
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('nature')"> Pneus+Jantes</button>
+      <button class="btn" onclick="filterSelection('cars')"> Metaux+tole</button>
+      <button class="btn" onclick="filterSelection('people')"> Pare-choc+capot</button>
+    </div>
 
-      <!-- Portfolio Gallery Grid -->
-      <div class="row">
-        <div class="column nature">
-          <div class="content">
-            <span id="myBtn1"><img src="images/produit1.jfif" alt="" style="width:100%">
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column nature">
+        <div class="content">
+          <span id="myBtn1"><img src="images/produit1.jfif" alt="" style="width:100%">
             <h4>produit</h4>
-            <p>Lorem ipsum dolor..</p></span>
-          </div>
-        </div>
-        <div class="column nature">
-          <div class="content">
-            <span id="myBtn2"><img src="images/produit2.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
+          </span>
         </div>
-        <div class="column nature">
-          <div class="content">
-            <span id="myBtn3"><img src="images/produit3.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
+      </div>
+      <div class="column nature">
+        <div class="content">
+          <span id="myBtn2"><img src="images/produit2.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
         </div>
-        
-        <div class="column cars">
-          <div class="content">
-            <span id="myBtn4"><img src="images/produit4.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
+      </div>
+      <div class="column nature">
+        <div class="content">
+          <span id="myBtn3"><img src="images/produit3.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
         </div>
-        <div class="column cars">
-          <div class="content">
-            <span id="myBtn5"><img src="images/produit5.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
+      </div>
+
+      <div class="column cars">
+        <div class="content">
+          <span id="myBtn4"><img src="images/produit4.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
         </div>
-        <div class="column cars">
-          <div class="content">
-            <span id="myBtn6"><img src="images/produit6.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
+      </div>
+      <div class="column cars">
+        <div class="content">
+          <span id="myBtn5"><img src="images/produit5.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
         </div>
-      
-        <div class="column people">
-          <div class="content">
-            <span id="myBtn7"><img src="images/produit7.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
+      </div>
+      <div class="column cars">
+        <div class="content">
+          <span id="myBtn6"><img src="images/produit6.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
         </div>
-        <div class="column people">
-          <div class="content">
-            <span id="myBtn8"><img src="images/produit8.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
+      </div>
+
+      <div class="column people">
+        <div class="content">
+          <span id="myBtn7"><img src="images/produit7.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
         </div>
-        <div class="column people">
-          <div class="content">
-            <span id="myBtn9"><img src="images/produit9.jfif" alt="" style="width:100%">
-              <h4>produit</h4>
+      </div>
+      <div class="column people">
+        <div class="content">
+          <span id="myBtn8"><img src="images/produit8.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
             <p>Lorem ipsum dolor..</p>
-          </div>
         </div>
+      </div>
+      <div class="column people">
+        <div class="content">
+          <span id="myBtn9"><img src="images/produit9.jfif" alt="" style="width:100%">
+            <h4>produit</h4>
+            <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
       <!-- END GRID -->
-      </div>
-      
-    </div>  
+    </div>
 
-    <footer class="footer">
-      <div class="container">
-          <div class="row">
-              <div class="col-5 offset-1 col-sm-2">
-                <img src="images/logo2.png" style="max-width: 150px;max-height:150px ;">
-              </div>
-              <div class="col-6 col-sm-5">
+  </div>
 
-              </div>
-              <div class="col col-sm-4 align-self-center">
-                  <div style="text-align:center">
-                      <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                      <a class=" btn btn-fb" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook left"></i></a>
-                      <a class="btn " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                      <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                      <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                      <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
-                  </div>
-              </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-5 offset-1 col-sm-2">
+          <img src="images/logo2.png" style="max-width: 150px;max-height:150px ;">
+        </div>
+        <div class="col-6 col-sm-5">
+
+        </div>
+        <div class="col col-sm-4 align-self-center">
+          <div style="text-align:center">
+            <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+            <a class=" btn btn-fb" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook left"></i></a>
+            <a class="btn " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
           </div>
-          <div class="row justify-content-center">
-              <div class="col-auto">
-                  <p>© Copyright 2020 Mouheb Hamza 2021</p>
-              </div>
-          </div>
+        </div>
       </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <p>© Copyright 2020 Mouheb Hamza 2021</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
-      <div id="myModal1" class="modal">
-        <!-- Modal content -->
-        <div class="modal-header">
-        
-        <span class="close">&times;</span>
-        </div>
-        <div class="modal-content table-responsive">
-        
-        <div class="small-container single-product">
-            <div class="row">
-                    <img src="images/produit1.jfif" width="50%" class="col-12 col-5 col-sm-5">
-        
-                <div class="col-2">
-                  <p>Home /Product</p>
-                  <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                  <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                  </h4>
-                    <select style="color: blue;"">
+  <div id="myModal1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit1.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Pneus</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;"">
                         <option >Select region</option>
                         <option>Tunis</option>
                         <option>Sousse</option>
@@ -172,39 +183,44 @@
                         <option>Nabeul</option>
                     </select>
                     <br>
-                    <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                    <br>
-                    <h3>Product Details <i class="fa fa-indent"></i></h3>
-                    <br>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                </div>
-            </div>
+                    <a href="" class=" btn btn-warning" onclick="addToCart('1','20.00','Pneus','images/produit1.jfif')">Add To
+              Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
+          </div>
         </div>
-        </div>
-        </div>
-        
-        </div>
-        
-        </div>
-        <div id="myModal2" class="modal">
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-            <span class="close">&times;</span>
-            </div>
-            <div class="modal-content table-responsive">
-            
-            <div class="small-container single-product">
-                <div class="row">
-                        <img src="images/produit2.jfif" width="50%" class="col-12 col-5 col-sm-5">
-            
-                    <div class="col-2">
-                      <p>Home /Product</p>
-                      <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                      <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                      </h4>
-                        <select style="color: blue;"">
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  <div id="myModal2" class="modal">
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit2.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Pneus</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;"">
                             <option >Select region</option>
                             <option>Tunis</option>
                             <option>Sousse</option>
@@ -213,39 +229,45 @@
                             <option>Nabeul</option>
                         </select>
                         <br>
-                        <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                        <br>
-                        <h3>Product Details <i class="fa fa-indent"></i></h3>
-                        <br>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-            
-            </div>
-          
+                        <a href="" class=" btn btn-warning" onclick="addToCart('2','20.00','Pneus','images/produit2.jfif')">Add
+              To
+              Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
           </div>
-          <div id="myModal3" class="modal">
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-              <span class="close">&times;</span>
-              </div>
-              <div class="modal-content table-responsive">
-              
-              <div class="small-container single-product">
-                  <div class="row">
-                          <img src="images/produit3.jfif" width="50%" class="col-12 col-5 col-sm-5">
-              
-                      <div class="col-2">
-                        <p>Home /Product</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                        <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                        </h4>
-                          <select style="color: blue;"">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  <div id="myModal3" class="modal">
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit3.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;"">
                               <option >Select region</option>
                               <option>Tunis</option>
                               <option>Sousse</option>
@@ -254,38 +276,44 @@
                               <option>Nabeul</option>
                           </select>
                           <br>
-                          <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                          <br>
-                          <h3>Product Details <i class="fa fa-indent"></i></h3>
-                          <br>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-              
-              </div>
+                          <a href="" class=" btn btn-warning"
+              onclick="addToCart('3','20.00','Pneus','images/produit3.jfif')">Add To
+              Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
           </div>
-            <div id="myModal4" class="modal">
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-              <span class="close">&times;</span>
-              </div>
-              <div class="modal-content table-responsive">
-              
-              <div class="small-container single-product">
-                  <div class="row">
-                          <img src="images/produit4.jfif" width="50%" class="col-12 col-5 col-sm-5">
-              
-                      <div class="col-2">
-                        <p>Home /Product</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                        <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                        </h4>
-                          <select style="color: blue;"">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div id="myModal4" class="modal">
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit4.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;"">
                               <option >Select region</option>
                               <option>Tunis</option>
                               <option>Sousse</option>
@@ -294,41 +322,47 @@
                               <option>Nabeul</option>
                           </select>
                           <br>
-                          <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                          <br>
-                          <h3>Product Details <i class="fa fa-indent"></i></h3>
-                          <br>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-              
-              </div>
-              
-            </div>
-            
-            <div id="myModal5" class="modal">
-        
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-              <span class="close">&times;</span>
-              </div>
-              <div class="modal-content table-responsive">
-              
-              <div class="small-container single-product">
-                  <div class="row">
-                          <img src="images/produit5.jfif" width="50%" class="col-12 col-5 col-sm-5">
-              
-                      <div class="col-2">
-                        <p>Home /Product</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                        <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                        </h4>
-                          <select style="color: blue;"">
+                          <a href="" class=" btn btn-warning"
+              onclick="addToCart('4','20.00','Pneus','images/produit4.jfif')">Add To
+              Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+  <div id="myModal5" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit5.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;">
                               <option >Select region</option>
                               <option>Tunis</option>
                               <option>Sousse</option>
@@ -337,38 +371,44 @@
                               <option>Nabeul</option>
                           </select>
                           <br>
-                          <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                          <br>
-                          <h3>Product Details <i class="fa fa-indent"></i></h3>
-                          <br>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-              
-              </div>
-              </div>
-              <div id="myModal6" class="modal">
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-              <span class="close">&times;</span>
-              </div>
-              <div class="modal-content table-responsive">
-              
-              <div class="small-container single-product">
-                  <div class="row">
-                          <img src="images/produit6.jfif" width="50%" class="col-12 col-5 col-sm-5">
-              
-                      <div class="col-2">
-                        <p>Home /Product</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                        <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                        </h4>
-                          <select style="color: blue;"">
+                          <a href="" class=" btn btn-warning"
+              onclick="addToCart('5','20.00','Pneus','images/produit5.jfif')">Add To
+              Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div id="myModal6" class="modal">
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit6.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;">
                               <option >Select region</option>
                               <option>Tunis</option>
                               <option>Sousse</option>
@@ -377,39 +417,45 @@
                               <option>Nabeul</option>
                           </select>
                           <br>
-                          <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                          <br>
-                          <h3>Product Details <i class="fa fa-indent"></i></h3>
-                          <br>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-              
-              </div>
-              </div>
-              <div id="myModal7" class="modal">
-        
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-              <span class="close">&times;</span>
-              </div>
-              <div class="modal-content table-responsive">
-              
-              <div class="small-container single-product">
-                  <div class="row">
-                          <img src="images/produit7.jfif" width="50%" class="col-12 col-5 col-sm-5">
-              
-                      <div class="col-2">
-                        <p>Home /Product</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                        <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                        </h4>
-                          <select style="color: blue;"">
+                          <a href="" class=" btn btn-warning"
+              onclick="addToCart('6','20.00','Pneus','images/produit6.jfif')">Add To
+              Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div id="myModal7" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit7.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;">
                               <option >Select region</option>
                               <option>Tunis</option>
                               <option>Sousse</option>
@@ -418,38 +464,43 @@
                               <option>Nabeul</option>
                           </select>
                           <br>
-                          <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                          <br>
-                          <h3>Product Details <i class="fa fa-indent"></i></h3>
-                          <br>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-              
-              </div>
-              <div id="myModal8" class="modal">
-        
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-              <span class="close">&times;</span>
-              </div>
-              <div class="modal-content table-responsive">
-              
-              <div class="small-container single-product">
-                  <div class="row">
-                          <img src="images/produit8.jfif" width="50%" class="col-12 col-5 col-sm-5">
-              
-                      <div class="col-2">
-                        <p>Home /Product</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                        <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                        </h4>
-                          <select style="color: blue;"">
+                          <a href="" class=" btn btn-warning"
+              onclick="addToCart('7','20.00','Pare Choc','images/produit7.jfif')">Add To Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div id="myModal8" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit8.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;"">
                               <option >Select region</option>
                               <option>Tunis</option>
                               <option>Sousse</option>
@@ -458,38 +509,43 @@
                               <option>Nabeul</option>
                           </select>
                           <br>
-                          <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                          <br>
-                          <h3>Product Details <i class="fa fa-indent"></i></h3>
-                          <br>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-              
-              </div>
-              </div>
-              <div id="myModal9" class="modal">
-            <!-- Modal content -->
-            <div class="modal-header">
-            
-              <span class="close">&times;</span>
-              </div>
-              <div class="modal-content table-responsive">
-              
-              <div class="small-container single-product">
-                  <div class="row">
-                          <img src="images/produit9.jfif" width="50%" class="col-12 col-5 col-sm-5">
-              
-                      <div class="col-2">
-                        <p>Home /Product</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
-                        <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
-                        </h4>
-                          <select style="color: blue;"">
+                          <a href="" class=" btn btn-warning"
+              onclick="addToCart('8','20.00','Pare Choc','images/produit8.jfif')">Add To Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <div id="myModal9" class="modal">
+    <!-- Modal content -->
+    <div class="modal-header">
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-content table-responsive">
+
+      <div class="small-container single-product">
+        <div class="row">
+          <img src="images/produit9.jfif" width="50%" class="col-12 col-5 col-sm-5">
+
+          <div class="col-2">
+            <p>Home /Product</p>
+            <h1>Lorem Ipsum is simply dummy text of the printing and</h1>
+            <h4><s>$50.00</s> &nbsp;&nbsp; &nbsp; <b> $20.00</b>
+            </h4>
+            <select style="color: blue;"">
                               <option >Select region</option>
                               <option>Tunis</option>
                               <option>Sousse</option>
@@ -498,316 +554,328 @@
                               <option>Nabeul</option>
                           </select>
                           <br>
-                          <a href="" class="btn btn-warning" onclick="window.open('panier.html')">Add To Cart</a>
-                          <br>
-                          <h3>Product Details <i class="fa fa-indent"></i></h3>
-                          <br>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              </div>
-              
-              </div>
-              </div>
-        
-        <script>
-          // Get the modal
-          var modal = document.getElementById('myModal1');
-          
-          // Get the button that opens the modal
-          var btn = document.getElementById("myBtn1");
-          
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
-          
-          // When the user clicks the button, open the modal 
-          btn.onclick = function() {
-          modal.style.display = "block";
-          }
-          
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function() {
-          modal.style.display = "none";
-          }
-          
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-          }
-          
-          
-          var modal2 = document.getElementById('myModal2');
-          
-          // Get the button that opens the modal
-          var btn2 = document.getElementById("myBtn2");
-          
-          // Get the <span> element that closes the modal
-          var span2 = document.getElementsByClassName("close")[1];
-          
-          // When the user clicks the button, open the modal 
-          btn2.onclick = function() {
-          modal2.style.display = "block";
-          }
-          
-          // When the user clicks on <span> (x), close the modal
-          span2.onclick = function() {
-          modal2.style.display = "none";
-          }
-          
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-          if (event.target == modal2) {
-              modal2.style.display = "none";
-          }
-          }
-        
-        
-        
-        
-          var modal3 = document.getElementById('myModal3');
-          
-          // Get the button that opens the modal
-          var btn3 = document.getElementById("myBtn3");
-          
-          // Get the <span> element that closes the modal
-          var span3 = document.getElementsByClassName("close")[2];
-          
-          // When the user clicks the button, open the modal 
-          btn3.onclick = function() {
-          modal3.style.display = "block";
-          }
-          
-          // When the user clicks on <span> (x), close the modal
-          span3.onclick = function() {
-          modal3.style.display = "none";
-          }
-          
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-          if (event.target == modal3) {
-              modal3.style.display = "none";
-          }
-          }
+                          <a href="" class=" btn btn-warning"
+              onclick="addToCart('9','20.00','Capot','images/produit9.jfif')">Add To
+              Cart</a>
+              <br>
+              <h3>Product Details <i class="fa fa-indent"></i></h3>
+              <br>
+              <p>Lorem Ipsum is simply dummy text of the printing and typeseter took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal1');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn1");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+
+    var modal2 = document.getElementById('myModal2');
+
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtn2");
+
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close")[1];
+
+    // When the user clicks the button, open the modal 
+    btn2.onclick = function () {
+      modal2.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function () {
+      modal2.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
+    }
+
+
+
+
+    var modal3 = document.getElementById('myModal3');
+
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("myBtn3");
+
+    // Get the <span> element that closes the modal
+    var span3 = document.getElementsByClassName("close")[2];
+
+    // When the user clicks the button, open the modal 
+    btn3.onclick = function () {
+      modal3.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function () {
+      modal3.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal3) {
+        modal3.style.display = "none";
+      }
+    }
 
 
 
 
 
-          var modal4 = document.getElementById('myModal4');
-          
-          // Get the button that opens the modal
-          var btn4 = document.getElementById("myBtn4");
-          
-          // Get the <span> element that closes the modal
-          var span4 = document.getElementsByClassName("close")[3];
-          
-          // When the user clicks the button, open the modal 
-          btn4.onclick = function() {
-          modal4.style.display = "block";
-          }
-          
-          // When the user clicks on <span> (x), close the modal
-          span4.onclick = function() {
-          modal4.style.display = "none";
-          }
-          
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-          if (event.target == modal4) {
-              modal4.style.display = "none";
-          }
-          }
+    var modal4 = document.getElementById('myModal4');
 
-  
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("myBtn4");
+
+    // Get the <span> element that closes the modal
+    var span4 = document.getElementsByClassName("close")[3];
+
+    // When the user clicks the button, open the modal 
+    btn4.onclick = function () {
+      modal4.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span4.onclick = function () {
+      modal4.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal4) {
+        modal4.style.display = "none";
+      }
+    }
+
+
     //get modal 5
     var modal5 = document.getElementById('myModal5');
-  
-  // Get the button that opens the modal
-  var btn5 = document.getElementById("myBtn5");
-  
-  // Get the <span> element that closes the modal
-  var span5 = document.getElementsByClassName("close")[4];
-  
-  // When the user clicks the button, open the modal 
-  btn5.onclick = function() {
-  modal5.style.display = "block";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  span5.onclick = function() {
-  modal5.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-  if (event.target == modal5) {
+
+    // Get the button that opens the modal
+    var btn5 = document.getElementById("myBtn5");
+
+    // Get the <span> element that closes the modal
+    var span5 = document.getElementsByClassName("close")[4];
+
+    // When the user clicks the button, open the modal 
+    btn5.onclick = function () {
+      modal5.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span5.onclick = function () {
       modal5.style.display = "none";
-  }
-  }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal5) {
+        modal5.style.display = "none";
+      }
+    }
 
 
     //get modal 6
     var modal6 = document.getElementById('myModal6');
-  
-  // Get the button that opens the modal
-  var btn6 = document.getElementById("myBtn6");
-  
-  // Get the <span> element that closes the modal
-  var span6 = document.getElementsByClassName("close")[5];
-  
-  // When the user clicks the button, open the modal 
-  btn6.onclick = function() {
-  modal6.style.display = "block";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  span6.onclick = function() {
-  modal6.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-  if (event.target == modal6) {
+
+    // Get the button that opens the modal
+    var btn6 = document.getElementById("myBtn6");
+
+    // Get the <span> element that closes the modal
+    var span6 = document.getElementsByClassName("close")[5];
+
+    // When the user clicks the button, open the modal 
+    btn6.onclick = function () {
+      modal6.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span6.onclick = function () {
       modal6.style.display = "none";
-  }
-  }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal6) {
+        modal6.style.display = "none";
+      }
+    }
 
 
     //get modal 7
     var modal7 = document.getElementById('myModal7');
-  
-  // Get the button that opens the modal
-  var btn7 = document.getElementById("myBtn7");
-  
-  // Get the <span> element that closes the modal
-  var span7 = document.getElementsByClassName("close")[6];
-  
-  // When the user clicks the button, open the modal 
-  btn7.onclick = function() {
-  modal7.style.display = "block";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  span7.onclick = function() {
-  modal7.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-  if (event.target == modal7) {
+
+    // Get the button that opens the modal
+    var btn7 = document.getElementById("myBtn7");
+
+    // Get the <span> element that closes the modal
+    var span7 = document.getElementsByClassName("close")[6];
+
+    // When the user clicks the button, open the modal 
+    btn7.onclick = function () {
+      modal7.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span7.onclick = function () {
       modal7.style.display = "none";
-  }
-  }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal7) {
+        modal7.style.display = "none";
+      }
+    }
 
 
     //get modal 8
     var modal8 = document.getElementById('myModal8');
-  
-  // Get the button that opens the modal
-  var btn8 = document.getElementById("myBtn8");
-  
-  // Get the <span> element that closes the modal
-  var span8 = document.getElementsByClassName("close")[7];
-  
-  // When the user clicks the button, open the modal 
-  btn8.onclick = function() {
-  modal8.style.display = "block";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  span8.onclick = function() {
-  modal8.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-  if (event.target == modal8) {
+
+    // Get the button that opens the modal
+    var btn8 = document.getElementById("myBtn8");
+
+    // Get the <span> element that closes the modal
+    var span8 = document.getElementsByClassName("close")[7];
+
+    // When the user clicks the button, open the modal 
+    btn8.onclick = function () {
+      modal8.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span8.onclick = function () {
       modal8.style.display = "none";
-  }
-  }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal8) {
+        modal8.style.display = "none";
+      }
+    }
 
 
     //get modal 9
     var modal9 = document.getElementById('myModal9');
-  
-  // Get the button that opens the modal
-  var btn9 = document.getElementById("myBtn9");
-  
-  // Get the <span> element that closes the modal
-  var span9 = document.getElementsByClassName("close")[8];
-  
-  // When the user clicks the button, open the modal 
-  btn9.onclick = function() {
-  modal9.style.display = "block";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  span9.onclick = function() {
-  modal9.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-  if (event.target == modal9) {
+
+    // Get the button that opens the modal
+    var btn9 = document.getElementById("myBtn9");
+
+    // Get the <span> element that closes the modal
+    var span9 = document.getElementsByClassName("close")[8];
+
+    // When the user clicks the button, open the modal 
+    btn9.onclick = function () {
+      modal9.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span9.onclick = function () {
       modal9.style.display = "none";
-  }
-  }
-        </script>
-        
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal9) {
+        modal9.style.display = "none";
+      }
+    }
+  </script>
 
 
 
 
-    <script>
-        filterSelection("all")
-        function filterSelection(c) {
-          var x, i;
-          x = document.getElementsByClassName("column");
-          if (c == "all") c = "";
-          for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-          }
+
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    function addToCart(id, price, name, img) {
+      var cart = JSON.parse(window.localStorage.getItem('cart')) || []
+      cart.push({ id, price, name, img })
+      window.localStorage.setItem('cart', JSON.stringify(cart))
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
         }
-        
-        function w3AddClass(element, name) {
-          var i, arr1, arr2;
-          arr1 = element.className.split(" ");
-          arr2 = name.split(" ");
-          for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-          }
-        }
-        
-        function w3RemoveClass(element, name) {
-          var i, arr1, arr2;
-          arr1 = element.className.split(" ");
-          arr2 = name.split(" ");
-          for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-              arr1.splice(arr1.indexOf(arr2[i]), 1);     
-            }
-          }
-          element.className = arr1.join(" ");
-        }
-        
-        
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", function(){
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-          });
-        }
-        </script>
-        
+      }
+      element.className = arr1.join(" ");
+    }
+
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+
 </body>
+
 </html>
